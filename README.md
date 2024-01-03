@@ -33,4 +33,4 @@ Navigate to the cloned repository directory and source the R scripts in R within
 ```
 For a detailed description of the methods, please refer to the original publication.
 
-This work is part of a research study conducted by Mridul Johari and collaborators. For further information or queries, please contact mridul.johari@helsinki.fi
+For further information or queries, please contact mridul.johari@helsinki.fi
