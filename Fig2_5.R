@@ -2,7 +2,7 @@
 # Load the workspace
 load("IBMtranscriptomics.RData")
 
-# Pacman for package management
+# Ensure all required packages are installed and loaded using pacman
 if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
 pacman::p_load(RColorBrewer, gridExtra, ggplot2, ggdist, dplyr, DESeq2)
 
@@ -29,7 +29,7 @@ create_and_save_plot <- function(gene, dds, filename) {
     coord_cartesian(xlim = c(1.2, NA), clip = "off") +
     scale_y_log10() + scale_fill_manual(values = cols_plot) +
     blank_theme +
-    ggtitle(bquote(italic(.(hgnc_symbol))))  # Corrected title expression
+    ggtitle(bquote(italic(.(hgnc_symbol))))
 
   ggsave(filename, plot, width = 297, height = 210, units = "mm", dpi = 300)
   return(plot)

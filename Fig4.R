@@ -2,7 +2,7 @@
 # Load the workspace
 load("IBMtranscriptomics.RData")
 
-# Pacman for efficient package management
+# Ensure all required packages are installed and loaded using pacman
 if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
 pacman::p_load(RColorBrewer, gridExtra, ggplot2, clusterProfiler, org.Hs.eg.db, reshape2, dplyr, ComplexUpset)
 

@@ -1,7 +1,7 @@
 # This script is for figure 1
 # load the workspace if not already loaded
 # load.image('IBMtranscriptomics.RData')
-# Ensure all required packages are installed and loaded
+# Ensure all required packages are installed and loaded using pacman
 if (!require(pacman)) install.packages("pacman")
 pacman::p_load(RColorBrewer, gridExtra, ggplot2, VennDiagram, dplyr, ggbeeswarm)
 
@@ -12,9 +12,9 @@ save_plot <- function(plot, filename, width, height, pointsize, res) {
   dev.off()
 }
 
-# PCA plot - Assuming p1 and p2 are already created PCA plots
+# PCA plot
 save_plot(p1, "Principal_component_analysis_IBM_AMP.png", 4800, 3600, 8, 600)
-save_plot(p2, "Principal_component_analysis_IBM_TMD.png", 4800, 3600, 8, 600)  # If p2 is a separate plot
+save_plot(p2, "Principal_component_analysis_IBM_TMD.png", 4800, 3600, 8, 600)
 
 # Define a function for Venn diagrams for both read.csv and readLines inputs
 create_venn <- function(genes1, genes2, label1, label2, filename, colors) {
